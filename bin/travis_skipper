@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'travis_skipper'
+
+TravisSkipper.configure do |config|
+  config.travis.token = ENV['TRAVIS_TOKEN']
+  config.repository.name = ENV['REPO']
+  config.repository.branches = ENV['BRANCHES'].split(",").map(&:strip).compact
+end
+
+TravisSkipper::Listener.start
