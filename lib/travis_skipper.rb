@@ -14,4 +14,8 @@ module TravisSkipper
     setting :name
     setting :branches, %w(master)
   end
+
+  setting :logger do
+    setting :path
+  end
 end

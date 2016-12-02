@@ -3,7 +3,7 @@ require 'logger'
 module TravisSkipper
   class Logger
     def initialize
-      @logger = ::Logger.new('travis_skipper.log', 'daily')
+      @logger = ::Logger.new(TravisSkipper.config.logger.path, 'daily')
     end
 
     def log(txt)
