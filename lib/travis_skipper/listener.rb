@@ -50,7 +50,7 @@ module TravisSkipper
     end
 
     def handler_branch(event)
-      if config.repository.branches.include?(event.build.commit.branch)
+      if config.repository.branches.include?(event.build.commit.branch) || config.repository.branches.empty?
         cancel_after(event) do |build, other_build|
           !other_build.pull_request? && other_build.commit.branch == build.commit.branch
         end
