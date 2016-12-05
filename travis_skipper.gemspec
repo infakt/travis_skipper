@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Infakt DevTeam"]
   spec.email         = ["p@infakt.pl"]
 
-  spec.summary       = %q{Skips build on travis}
-  spec.description   = %q{Skips build on travis}
+  spec.summary       = %q{Skips duplicated build on travis}
+  spec.description   = %q{Skips duplicated build on travis}
   spec.homepage      = "https://github.com/infakt/travis_skipper"
   spec.license       = "MIT"
 
