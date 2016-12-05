@@ -1,6 +1,8 @@
 # TravisSkipper
 
-TravisSkipper allows you to build only newset changes on PRs, and Branches. When you push many commits to repo TS will cancel all build besides newest one on each branch/PR. It also cancels builds on a branch ith this branch is used in PR.
+TravisSkipper allows you to build only newset changes on PRs, and Branches. When you push many commits to repo TS will cancel all build besides newest one on each branch/PR. It also cancels builds on a branch if this branch is used in PR.
+
+Internally it listen to Travis [events] (https://github.com/travis-ci/travis.rb#listening-for-events) for given repo and cancels previous builds for each newone.
 
 ## Installation
 
@@ -19,6 +21,8 @@ Or install it yourself as:
     $ gem install travis_skipper
 
 ## Usage
+
+You need to set proper configuration and start up a listener. To run it in the background you can use [daemons] (https://rubygems.org/gems/daemons) gem.
 
 ```ruby
 TravisSkipper.configure do |config|
