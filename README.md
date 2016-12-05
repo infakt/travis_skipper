@@ -1,6 +1,6 @@
 # TravisSkipper
 
-TravisSkipper allows you to build only newset changes on PRs, and Branches. When you push many commits to repo TS will cancel all build besides newest one on each branch/PR. It also cancel builds on a branch if this branch is use in PR.
+TravisSkipper allows you to build only newset changes on PRs, and Branches. When you push many commits to repo TS will cancel all build besides newest one on each branch/PR. It also cancels builds on a branch ith this branch is used in PR.
 
 ## Installation
 
