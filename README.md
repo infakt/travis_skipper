@@ -1,7 +1,6 @@
 # TravisSkipper
 
-
-
+TravisSkipper allows you to build only newset changes on PRs, and Branches. When you push many commits to repo TS will cancel all build besides newest one on each branch/PR. It also cancel builds on a branch if this branch is use in PR.
 
 ## Installation
 
@@ -23,10 +22,10 @@ Or install it yourself as:
 
 ```ruby
 TravisSkipper.configure do |config|
-  config.travis.token = # Token from travis
-  config.repository.name = # repository name, eg 'infakt/travis_skipper'
-  config.repository.branches = # branches on which we want to let jobs run
-  config.logger.path = # path to log file
+  config.travis.token = "XXX" # Token from travis
+  config.repository.name = "infakt/travis_skipper" # repository name
+  config.repository.branches = %w(master) # branches on which we want to let jobs run
+  config.logger.path = "logs/skipper.log" # path to log file
 end
 
 TravisSkipper::Listener.start
@@ -40,4 +39,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/infakt
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
