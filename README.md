@@ -1,8 +1,12 @@
+# Travis Auto Cancellation
+
+There is no need for that gem anymore, Travis introduced [Auto Cancellation](https://blog.travis-ci.com/2017-03-22-introducing-auto-cancellation)
+
 # TravisSkipper
 
 TravisSkipper allows you to build only newset changes on PRs, and Branches. When you push many commits to repo TS will cancel all build besides newest one on each branch/PR. It also cancels builds on a branch if this branch is used in PR.
 
-Internally it listen to Travis [events] (https://github.com/travis-ci/travis.rb#listening-for-events) for given repo and cancels previous builds for each newone.
+Internally it listen to Travis [events](https://github.com/travis-ci/travis.rb#listening-for-events) for given repo and cancels previous builds for each newone.
 
 ## Installation
 
